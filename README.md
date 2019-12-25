@@ -36,8 +36,8 @@
 |id|integer|null: false, unique: true|
 |body|text|null: false|
 |image|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false|
+|user_id|integer|null: false|
 
 ### Association
 -  belongs_to :user
