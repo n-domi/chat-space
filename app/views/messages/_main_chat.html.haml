@@ -5,9 +5,8 @@
         NORTHKOREA
       .chat-main__header__left-box__member-list
         kim family
-    .chat-main__header__edit-btn
-      %a{ href:'#'}
-        Edit
+    =link_to "#", class: "chat-main__header__edit-btn" do
+      Edit
   .chat-main__messages
     .chat-main__messages__message
       .chat-main__messages__message__upper-info
@@ -18,15 +17,15 @@
       .chat-main__messages__message__text
         Oh my Dad!
       .chat-main__messages__message__img
-        %img{src: "https://assets.media-platform.com/bi/dist/images/2017/08/10/4eef723b69bedd983200001b.jpg"}
+        =image_tag "https://assets.media-platform.com/bi/dist/images/2017/08/10/4eef723b69bedd983200001b.jpg"
   .chat-main__form
     .chat-main__form__new-message
       .chat-main__form__new-message__input-box
-        %input.chat-main__form__new-message__input-box__text{:name => "text", :placeholder => "type a text", :type => "text", :value => ""}/
+        %input.chat-main__form__new-message__input-box__text{name: "text", placeholder: "type a text", type: "text", value: ""}/
         %label.chat-main__form__new-message__input-box__image
           = icon('fas', 'image')
           %input.chat-main__form__new-message__input-box__image__file{type: "file"}
-      %input.chat-main__form__new-message__submit-btn{"data-disable-with" => "Send", name:"commit", type:"submit", value:"Send"}/
+      %input.chat-main__form__new-message__submit-btn{"data-disable-with": "Send", name:"commit", type:"submit", value:"Send"}/
         
 
         
