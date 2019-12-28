@@ -1,0 +1,21 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__box
+      .side-bar__header__box__user-name
+        kim-jong-un
+      %ul.side-bar__header__box__menu
+        %li.side-bar__header__menu__new-group
+          =link_to "#",class:"btn" do
+            =icon('far fa-edit', class:"menu__btn__icon menu__btn--edit") 
+            %span<>
+        %li.side-bar__header__menu__edit-user
+          =link_to "#",class:"btn" do
+            =icon('fa fa-cog', class:"menu__btn__icon menu__btn--edit") 
+  .side-bar__groups
+    .side-bar__groups__group
+      %p.side-bar__groups__group__group-name 
+        NORTH KOREA
+      %p.side-bar__groups__group__latest-message
+        まだメッセージがありません
+
+
