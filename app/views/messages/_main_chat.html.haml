@@ -2,12 +2,15 @@
   .chat-main__header
     .chat-main__header__left-box
       .chat-main__header__left-box__current-group
-        NORTHKOREA
+        =@group.name
       .chat-main__header__left-box__member-list
-        kim family
-    =link_to "#", class: "chat-main__header__edit-btn" do
+        member:
+        - @group.users.each do |user|
+          =user.name
+    =link_to edit_group_path(@group.id), class: "chat-main__header__edit-btn" do
       Edit
   .chat-main__messages
+    = render @messages
     .chat-main__messages__message
       .chat-main__messages__message__upper-info
         .chat-main__messages__message__upper-info__talker
@@ -15,17 +18,12 @@
         .chat-main__messages__message__upper-info__date
           2019-12-26
       .chat-main__messages__message__text
-        Oh my Dad!
       .chat-main__messages__message__img
-        =image_tag "https://assets.media-platform.com/bi/dist/images/2017/08/10/4eef723b69bedd983200001b.jpg"
   .chat-main__form
-    .chat-main__form__new-message
+    = form_for [@group, @message], html: {class: "chat-main__form__new-message"} do |f|
       .chat-main__form__new-message__input-box
-        %input.chat-main__form__new-message__input-box__text{name: "text", placeholder: "type a text", type: "text", value: ""}/
-        %label.chat-main__form__new-message__input-box__image
-          = icon('fas', 'image')
-          %input.chat-main__form__new-message__input-box__image__file{type: "file"}
-      %input.chat-main__form__new-message__submit-btn{"data-disable-with": "Send", name:"commit", type:"submit", value:"Send"}/
-        
-
-        
+        = f.text_field :content, class: 'chat-main__form__new-message__input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'chat-main__form__new-message__input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'chat-main__form__new-message__input-box__image__file'
+      = f.submit 'Send', class: 'chat-main__form__new-message__submit-btn'
