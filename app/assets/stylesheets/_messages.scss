@@ -18,8 +18,9 @@
       height: 100px;
       width: 100%;
       display: flex;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
+      position: relative;
 
       &__box {
         background-color: #253141;
@@ -27,36 +28,36 @@
         width: calc(100% - 40px);
         justify-content: space-between;
         display: flex;
-      
-        &__user-name {
-          background-color: #253141;
-          height: 100%;
-          width: calc(100% - 60px);
-          color: white;
-        }
+        color: white;
 
-        &__menu {
-          background-color: #253141;
-          height: 100%;
-          display: flex;
-          text-align: right;
-        }
       }  
+      &__lists {
+        background-color: #253141;
+        width: calc(100% - 40px);
+        height: 20px;
+        justify-content: space-between;
+        display: flex;
+
+        &__list {
+
+        }
+      }
     }
     &__groups {
       
       &__group {
         padding: 20px;
-        color: white;
       
         &__group-name {
           font-size: 15px;
           margin-bottom: 5px;
+          color: white;
         }
 
         &__latest-message {
           font-size: 11px;
           margin-bottom: 40px;
+          color: white;
         }
       }
     }
@@ -207,3 +208,31 @@
   margin: 5px;
   margin-right: 0px;
 }
+
+.link{
+  color: white;
+}
+
+.header__lists {
+  // background-color: #253141;
+  // width: calc(100% - 40px);
+  height: 20px;
+  // justify-content: space-between;
+  display: flex;
+  position: absolute;
+  left: 250px;
+
+  &__list {
+
+  }
+}
+
+.icon {
+  color: white;
+}
+
+h3 {
+  color: white;
+  padding-left: 20px;
+}
+
