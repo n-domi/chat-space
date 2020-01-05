@@ -12,6 +12,7 @@
     height: 100%;
     width: 300px;
     background-color: #2f3e51;
+    // overflow: scroll;
 
     &__header {
       background-color: #253141;
@@ -76,6 +77,7 @@
       display: flex;
       justify-content: space-between;
       position: relative;
+      // position: fixed;
 
       &__left-box{
         height: 100%;
@@ -115,9 +117,11 @@
     }
     &__messages {
       padding-left: 40px;
+      overflow: scroll;
+      height: calc(100vh - 190px);
 
       &__message {
-
+    
         &__upper-info {
           margin-top: 35px;
           margin-bottom: 12px;
@@ -149,6 +153,7 @@
       position: absolute;
       bottom: 0px;
       padding: 20px 40px;
+      // position: fixed;
 
       &__new-message {
         display: flex;
@@ -214,10 +219,7 @@
 }
 
 .header__lists {
-  // background-color: #253141;
-  // width: calc(100% - 40px);
   height: 20px;
-  // justify-content: space-between;
   display: flex;
   position: absolute;
   left: 250px;
@@ -227,12 +229,17 @@
   }
 }
 
-.icon {
+.icon1 {
   color: white;
+}
+
+.icon2 {
+  color: black;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 h3 {
   color: white;
   padding-left: 20px;
 }
-
