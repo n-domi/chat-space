@@ -11,17 +11,11 @@
       Edit
   .chat-main__messages
     = render @messages
-    .chat-main__messages__message
-      .chat-main__messages__message__upper-info
-        .chat-main__messages__message__upper-info__talker
-        .chat-main__messages__message__upper-info__date
-      .chat-main__messages__message__text
-      .chat-main__messages__message__img
   .chat-main__form
     = form_for [@group, @message], html: {class: "chat-main__form__new-message"} do |f|
       .chat-main__form__new-message__input-box
         = f.text_field :content, class: 'chat-main__form__new-message__input-box__text', placeholder: 'type a message'
         = f.label :image, class: 'chat-main__form__new-message__input-box__image' do
-          = icon('fas', 'image', class: 'icon')
+          = icon('fas', 'image', class: 'icon2')
           = f.file_field :image, class: 'chat-main__form__new-message__input-box__image__file'
       = f.submit 'Send', class: 'chat-main__form__new-message__submit-btn'
