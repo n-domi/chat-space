@@ -57,7 +57,7 @@ $('#new_message').on('submit', function(e){
     $('.chat-main__form__new-message__submit-btn').prop("disabled", false);
   })
   .fail(function() {
-    alert("メッセージ送信に失敗しました");
+       alert("メッセージ送信に失敗しました");
 });
 })
 });
