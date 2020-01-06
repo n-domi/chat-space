@@ -15,7 +15,7 @@ $(function(){
              ${message.content}
            </p>
          </div>
-         <img src=${message.image}  class="chat-main__form__new-message__input-box__image">
+         <img src=${message.image}  class="lower-message__image">
        </div>`
      return html;
    } else {
