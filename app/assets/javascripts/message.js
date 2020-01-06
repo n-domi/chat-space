@@ -15,7 +15,7 @@ $(function(){
              ${message.content}
            </p>
          </div>
-         <img src=${message.image} >
+         <img src=${message.image}  class="chat-main__form__new-message__input-box__image">
        </div>`
      return html;
    } else {
@@ -58,6 +58,6 @@ $('#new_message').on('submit', function(e){
   })
   .fail(function() {
        alert("メッセージ送信に失敗しました");
-});
+  });
 })
 });
