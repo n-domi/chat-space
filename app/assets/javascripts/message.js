@@ -90,7 +90,7 @@ var reloadMessages = function() {
     $.each(messages, function(i, message) {
       insertHTML += buildHTML(message)
     });
-     $('.chat-main__messages').append(insertHTML);
+     $('.messages').append(insertHTML);
      $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
      $("#new_message")[0].reset();
      $(".chat-main__form__new-message__submit-btn").prop("disabled", false);
