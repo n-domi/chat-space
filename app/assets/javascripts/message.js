@@ -1,6 +1,5 @@
 $(function(){ 
   last_message_id = $('.message:last').data("message-id");
-  console.log(last_message_id);  
   var buildHTML = function(message) {
     if (message.content && message.image) {
       var html = `<div class="message" data-message-id=` + message.id + `>` +
@@ -76,8 +75,8 @@ $('#new_message').on('submit', function(e){
   });
 })
 var reloadMessages = function() {
+  
   last_message_id = $('.message:last').data("message-id");
-
   $.ajax({
     url: "api/messages",
     type: 'get',
@@ -90,18 +89,17 @@ var reloadMessages = function() {
     $.each(messages, function(i, message) {
       insertHTML += buildHTML(message)
     });
-     $('.messages').append(insertHTML);
-     $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
-     $("#new_message")[0].reset();
-     $(".chat-main__form__new-message__submit-btn").prop("disabled", false);
+    $('.chat-main__messages').append(insertHTML);
+    $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
     }
   })
   .fail(function() {
     alert('error');
   });
-};
   
+};
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
+  
 });
