@@ -1,5 +1,7 @@
 # README
 
+URL：http://52.196.29.147/
+
 ユーザー機能、グループ機能付きチャットアプリです。
 
 テストアカウント email : test@test ,  password : 11111111 　
