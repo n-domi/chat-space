@@ -1,5 +1,8 @@
 # README
 
+ユーザー機能、グループ機能付きチャットアプリです。
+
+テストアカウント email : test@test ,  password : 11111111 　
 
 ## usersテーブル
 
